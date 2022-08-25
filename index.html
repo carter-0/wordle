@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="wordle-favicon.ico"/>
+        <!-- HTML Meta Tags -->
+        <title>Wordle</title>
+        <meta name="description" content="Wordle but shit">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://wordle.carter.red/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Wordle">
+        <meta property="og:description" content="Wordle but shit">
+        <meta property="og:image" content="/og-image.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="wordle.carter.red">
+        <meta property="twitter:url" content="https://wordle.carter.red/">
+        <meta name="twitter:title" content="Wordle">
+        <meta name="twitter:description" content="Wordle but shit">
+        <meta name="twitter:image" content="/og-image.png">
+
+        <title>Wordle</title>
+        <link rel="stylesheet" href="index.css">
+        <!-- <link rel="stylesheet" href="normalize.css"> -->
+        <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header-container">
+            <h1 class="header">Wordle</h1>
+        </div>
+  
+        <div class="box-grid">
+            <ul class="c1">
+                <li class="r1"></li>
+                <li class="r2"></li>
+                <li class="r3"></li>
+                <li class="r4"></li>
+                <li class="r5"></li>
+                <li class="r6"></li>
+            </ul>
+            <ul class="c2">
+                <li class="r1"></li>
+                <li class="r2"></li>
+                <li class="r3"></li>
+                <li class="r4"></li>
+                <li class="r5"></li>
+                <li class="r6"></li>
+            </ul>
+            <ul class="c3">
+                <li class="r1"></li>
+                <li class="r2"></li>
+                <li class="r3"></li>
+                <li class="r4"></li>
+                <li class="r5"></li>
+                <li class="r6"></li>
+            </ul>
+            <ul class="c4">
+                <li class="r1"></li>
+                <li class="r2"></li>
+                <li class="r3"></li>
+                <li class="r4"></li>
+                <li class="r5"></li>
+                <li class="r6"></li>
+            </ul>
+            <ul class="c5">
+                <li class="r1"></li>
+                <li class="r2"></li>
+                <li class="r3"></li>
+                <li class="r4"></li>
+                <li class="r5"></li>
+                <li class="r6"></li>
+            </ul>
+        </div>
+
+        <div class="input-container">
+            <label for="word-input">type:</label>
+            <input onkeyup="onWordChange()" maxlength="5" type="text" id="word-input" class="input">
+        </div>
+
+        <div class="end-screen" id="end">
+            <p id="end-text"></p>
+            <button onclick="copyResult()" type="button" id="copy-result">Copy Result</button>
+        </div>
+
+    </main>
+</body>
+</html>
