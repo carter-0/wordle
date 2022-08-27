@@ -3,6 +3,8 @@ var colorArrHistory = [];
 var currentGuess = 1;
 var won = false;
 
+const todays_word = wordList[0];
+
 function onWordChange() {
     var input = document.getElementById("word-input");
     var boxes = document.getElementsByClassName("r"+String(currentGuess));
@@ -28,10 +30,10 @@ function checkWord(word) {
     let colorsArr = [];
 
     let wordArr = Array.from(word);
-    let realWordArr = Array.from(wordList[0]);
+    let realWordArr = Array.from(todays_word);
     
     for (let i=0; i<wordArr.length; i++) {
-        for (let k=0; k<wordList[0].length; k++) {
+        for (let k=0; k<todays_word.length; k++) {
             if (wordArr[i] == realWordArr[k] && !foundIndexes.includes(i) && !foundRealIndexes.includes(k)) {
                 foundLetters.push(wordArr[i]);
                 foundRealIndexes.push(k);
@@ -78,7 +80,7 @@ function endGame(state) {
         console.log("game lost")
         document.getElementById("word-input").disabled = true;
 
-        document.getElementById("end-text").innerHTML = "You lost!";
+        document.getElementById("end-text").innerHTML = "You lost! Word was "+todays_word;
         document.getElementById("end").style.display = "flex";
     }
 }
